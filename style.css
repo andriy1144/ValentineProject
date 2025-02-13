@@ -60,8 +60,11 @@ body {
   margin-bottom: 30px;
   font-size: 1.5rem;
   line-height: 40px;
+  transition: all 0.3s ease-in-out;
 }
-
+/* .content:hover > .hoverTextPart {
+  color: red;
+} */
 .highLightTextContainer {
   display: flex;
   justify-content: space-evenly;
@@ -142,7 +145,53 @@ body {
 
 .yes:hover {
   background-color: green;
+  box-shadow: 0 0 75px green;
+  scale: 1.25;
 }
 .no:hover {
   background-color: red;
+  box-shadow: 0 0 75px red;
+  scale: 0.5;
+}
+
+/* CONTENT CUSTOMISATION */
+.firstContent {
+  margin-top: 50px;
+}
+.firstContent > img {
+  float: left;
+  width: 300px;
+  border-radius: 25px;
+  margin-right: 50px;
+}
+
+.secondContent {
+  clear: both;
+  margin-top: 150px;
+}
+
+.secondContent > img {
+  width: 300px;
+  border-radius: 25px;
+  float: right;
+  margin-left: 50px;
+}
+
+.quote {
+  width: 50%;
+  font-size: 1.5rem;
+  font-style: italic;
+  text-align: center;
+  background-color: lightpink;
+  padding: 50px 0;
+  margin-left: 10%;
+  border-radius: 25px;
+  box-shadow: 0 0 75px red;
+  margin-top: 45px;
+}
+
+.thirdContent {
+  margin-top: 150px;
+  clear: both;
+  text-align: center;
 }
