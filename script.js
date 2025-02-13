@@ -1,3 +1,7 @@
+if (localStorage.getItem("token") == null) {
+  window.location.href = "index.html";
+}
+
 const contentContainer = document.querySelector(".contentContainer");
 const CONTENT_CONTAINER_WIDTH = contentContainer.offsetWidth;
 

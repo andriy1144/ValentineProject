@@ -19,6 +19,7 @@ function checkValid(form) {
     return false;
   }
 
+  window.localStorage.setItem("token", "love");
   return true;
 }
 
