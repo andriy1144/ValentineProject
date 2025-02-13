@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", serif;
+  background-color: lightpink;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  padding: 30px 30px;
+  background-color: rgb(255, 110, 132);
+  box-shadow: 10px 10px 100px rgb(255, 94, 121);
+  border-radius: 25px;
+  color: white;
+  width: 500px;
+  height: 65%;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.container:hover {
+  box-shadow: 0px 0px 100px red;
+}
+
+.auth-title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 900;
+}
+
+.form-container {
+  height: 70%;
+}
+
+.form-container > h3 {
+  font-size: 1.5rem;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.form-container > input {
+  width: 100%;
+  height: 50px;
+  outline: none;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  color: red;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-container > input:focus {
+  transform: scale(1.05);
+}
+#login {
+  margin-bottom: 20px;
+}
+.error {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: red;
+}
+
+.form-container > button {
+  float: right;
+  font-size: 25px;
+  font-weight: 900;
+  color: white;
+  height: 50px;
+  width: 50%;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 79, 166, 1) 47%,
+    rgba(252, 34, 34, 1) 100%
+  );
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.form-container > button:hover {
+  transform: scale(1.2);
+}
+
+.hints-block {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.hints-block > button {
+  flex-grow: 1;
+  height: 45px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.hints-block > #login-hint {
+  background-color: red;
+}
+
+.hints-block > #password-hint {
+  background-color: #00f5ff;
+}
+
+.hints-block > #login-hint:hover {
+  box-shadow: 10px 10px 100px red;
+  transform: scale(1.1);
+}
+
+.hints-block > #password-hint:hover {
+  box-shadow: 10px 10px 100px #00f5ff;
+  transform: scale(1.1);
+}
+
+/* HINTS STYLES */
+#login-hint-block,
+#password-hint-block {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+#password-hint-block > .main {
+  width: 450px;
+}
+
+.main {
+  background-color: red;
+  width: 350px;
+  height: 50%;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 25px;
+  color: white;
+  line-height: 25px;
+}
+.main > h2 {
+  margin-bottom: 20px;
+}
+
+.main > button {
+  margin-top: 50px;
+  border: none;
+  width: 100%;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 24px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.main > button:hover {
+  transform: scale(1.05);
+}
