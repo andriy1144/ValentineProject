@@ -20,7 +20,7 @@ body {
   border-radius: 25px;
   color: white;
   width: 500px;
-  height: 55%;
+  height: 65%;
   transition: box-shadow 0.3s ease-in-out;
 }
 
@@ -52,13 +52,22 @@ body {
   font-size: 24px;
   padding: 10px;
   border-radius: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: red;
   transition: all 0.3s ease-in-out;
 }
 
 .form-container > input:focus {
   transform: scale(1.05);
+}
+#login {
+  margin-bottom: 20px;
+}
+.error {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: red;
 }
 
 .form-container > button {
@@ -119,4 +128,49 @@ body {
 .hints-block > #password-hint:hover {
   box-shadow: 10px 10px 100px #00f5ff;
   transform: scale(1.1);
+}
+
+/* HINTS STYLES */
+#login-hint-block,
+#password-hint-block {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+#password-hint-block > .main {
+  width: 450px;
+}
+
+.main {
+  background-color: red;
+  width: 350px;
+  height: 50%;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 25px;
+  color: white;
+  line-height: 25px;
+}
+.main > h2 {
+  margin-bottom: 20px;
+}
+
+.main > button {
+  margin-top: 50px;
+  border: none;
+  width: 100%;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 24px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.main > button:hover {
+  transform: scale(1.05);
 }
