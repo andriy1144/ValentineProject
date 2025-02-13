@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+  background-color: lightpink;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: red;
+  border-radius: 15px;
+}
+
+body {
+  font-family: "Roboto", serif;
+  background-color: lightpink;
+}
+
+.contentContainer {
+  width: 80%;
+  margin: 100px auto;
+  padding: 60px 0;
+  background-color: rgb(255, 110, 132);
+  color: white;
+  border-radius: 2%;
+  box-shadow: 10px 10px 100px rgb(255, 94, 121);
+}
+
+.title {
+  text-align: center;
+  font-style: italic;
+  font-size: 3.5rem;
+  margin-bottom: 60px;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.kissImage {
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.mainContentContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.receiverName {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.content {
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+  line-height: 40px;
+}
+
+.highLightTextContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+.highLightText {
+  animation: tilt-shaking 0.25s infinite;
+  width: fit-content;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@keyframes tilt-shaking {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0eg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.confirmationTitle {
+  margin-top: 100px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 60px;
+}
+.confirmMessage {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.confirmBlockImage {
+  object-fit: contain;
+  float: left;
+  margin-right: 40px;
+}
+.boldText {
+  font-weight: 900;
+}
+.confirmationBlock {
+  margin-bottom: 80px;
+}
+.confirmForm {
+  margin-top: 50px;
+}
+.form-btn {
+  height: 100px;
+  width: 300px;
+  font-size: 2.5rem;
+  outline: none;
+  border: none;
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.yes {
+  background-color: lightgreen;
+}
+
+.no {
+  float: right;
+  position: relative;
+  background-color: lightcoral;
+}
+
+.yes:hover {
+  background-color: green;
+}
+.no:hover {
+  background-color: red;
+}
