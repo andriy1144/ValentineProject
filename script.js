@@ -20,18 +20,15 @@ const phrases = [
 ];
 let currentInd = 0;
 
-function checkValid() {
-  return counter == 0;
-}
-
 const jumpBtn = () => {
   let randomTop =
     -1 * getRandomNumberFromRange(-100, window.innerHeight + noBtnHeight);
   let randomLeft =
     -1 * getRandomNumberFromRange(-100, CONTENT_CONTAINER_WIDTH + noBtnWidth);
 
-  if (randomLeft <= -1000) {
-    randomLeft = 0;
+  console.log(`RANDOM_TOP: ${randomTop}, RANDOM_LEFT: ${randomLeft}`);
+  if (randomLeft <= -1400) {
+    randomLeft = -1000;
   }
 
   noBtn.setAttribute("value", phrases[currentInd++]);
