@@ -16,8 +16,6 @@ const noBtnWidth = noBtn.offsetWidth;
 const noBtnHeight = noBtn.offsetHeight;
 
 let counter = 9;
-let opacity = 1;
-let scale = 1;
 const phrases = [
   "Тобто Ні!?",
   "Ти впевнена?",
@@ -62,9 +60,9 @@ function handleNoButtonEvent() {
     document.querySelector("body").innerHTML +=
       '<div id="noWindow">' +
       '  <div class="window">' +
-      "<h3>Кохусь це печально, але я тобі дам останій шанс!</h3>" +
+      "<h3>ТА ЗА ЩО КОХУСЬ:( Давай тобі останій шанс</h3>" +
       " <p>" +
-      'Вибирай з розумом моя квіточко, якщо знову вибериш "Ні" то щось буде погане!' +
+      "Вибирай з розумом моя квіточко, інакше станеться щось погане!" +
       "</p>" +
       '<img src="./images/angry-kitten-angry-kitty.gif" alt="" />' +
       '<button onclick="handleCloseBlock()" id="closeBlock">Закрити</button>' +
@@ -90,7 +88,7 @@ function handleYesButtonEvent() {
     '<div id="yesWindow">' +
     '<div class="window">' +
     "<h3>ЄПІ ЄПІ ЄПІ ЄПІ ЄПІ ЄПІ!</h3>" +
-    "<p>Ти моє безмежне котятко, <strong>КОХАЮ БЕЗМЕЖНО!!!</strong></p>" +
+    "<p>Ти моє безмежне котятко, <strong>КОХАЮ БЕЗМЕЖНО!!!</strong>. Цьомі цьомі!</p>" +
     '<img src="./images/hn.gif" alt="" />' +
     "</div>" +
     "</div>";

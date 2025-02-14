@@ -295,3 +295,13 @@ body {
     opacity: 1;
   }
 }
+
+.hoverTextPart {
+  transition: all 0.3s ease-in-out;
+}
+.content:hover .hoverTextPart {
+  transform: scale(1.06);
+  color: red;
+  /* box-shadow: 0 0 00px red; */
+  font-weight: bold;
+}
