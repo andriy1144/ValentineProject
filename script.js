@@ -44,10 +44,6 @@ const jumpBtn = () => {
   noBtn.setAttribute("value", phrases[currentInd++]);
   noBtn.style.top = `${randomTop}px`;
   noBtn.style.left = `${randomLeft}px`;
-
-  if (counter == 0) {
-    noBtn.innerHTML = ":(";
-  }
   counter--;
 };
 noBtn.addEventListener("click", jumpBtn);
@@ -62,13 +58,13 @@ function handleNoButtonEvent() {
     music.pause();
     let sad = new Audio("./audio/wah-wah-sad-trombone-6347.mp3");
     sad.play();
-
+    noBtn.setAttribute("value", ":((");
     document.querySelector("body").innerHTML +=
       '<div id="noWindow">' +
       '  <div class="window">' +
       "<h3>Кохусь це печально, але я тобі дам останій шанс!</h3>" +
       " <p>" +
-      'Вибирай з розумом моя квіточко, якщо знову вибериш "Ні" то будеш піся попою назавжди!!!' +
+      'Вибирай з розумом моя квіточко, якщо знову вибериш "Ні" то щось буде погане!' +
       "</p>" +
       '<img src="./images/angry-kitten-angry-kitty.gif" alt="" />' +
       '<button onclick="handleCloseBlock()" id="closeBlock">Закрити</button>' +
