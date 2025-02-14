@@ -155,6 +155,15 @@ body {
   box-shadow: 0 0 75px red;
   scale: 0.5;
 }
+.disable {
+  background-color: gray;
+}
+.disable:hover {
+  background-color: lightgray;
+  box-shadow: none;
+  scale: 1;
+  cursor: crosshair;
+}
 
 /* CONTENT CUSTOMISATION */
 .firstContent {
@@ -196,4 +205,63 @@ body {
   margin-top: 150px;
   clear: both;
   text-align: center;
+}
+
+/* CUSTOM WINDOWS */
+#yesWindow,
+#noWindow {
+  text-align: center;
+  position: relative;
+  top: -650px;
+  left: 50%;
+  width: fit-content;
+  color: white;
+  font-size: 20px;
+  animation: appear 0.5s linear;
+}
+
+#noWindow {
+  left: 37.5%;
+  top: -580px;
+}
+#noWindow img {
+  width: 200px;
+}
+#noWindow button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  font-size: 30px;
+  color: white;
+  background-color: lightcoral;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+#noWindow button:hover {
+  background-color: pink;
+}
+.window {
+  width: fit-content;
+  padding: 30px;
+  background-color: red;
+  border-radius: 20px;
+}
+.window > * {
+  margin-bottom: 30px;
+}
+.window > img {
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    top: -750px;
+  }
+  to {
+    opacity: 1;
+    top: -650px;
+  }
 }

@@ -1,7 +1,6 @@
 if (localStorage.getItem("token") == null) {
   window.location.href = "index.html";
 }
-
 let music = new Audio("./audio/bg-music.mp3");
 music.volume = 0.5;
 music.loop = true;
@@ -15,8 +14,9 @@ const noBtn = document.querySelector(".no");
 const noBtnWidth = noBtn.offsetWidth;
 const noBtnHeight = noBtn.offsetHeight;
 
-let counter = 8;
-
+let counter = 9;
+let opacity = 1;
+let scale = 1;
 const phrases = [
   "Тобто Ні!?",
   "Ти впевнена?",
@@ -45,12 +45,56 @@ const jumpBtn = () => {
   noBtn.style.left = `${randomLeft}px`;
 
   counter--;
-  if (counter == 0) {
-    noBtn.style.display = "none";
-  }
 };
 noBtn.addEventListener("click", jumpBtn);
 
 function getRandomNumberFromRange(start, end) {
   return start + Math.floor(Math.random() * end);
+}
+
+noBtn.addEventListener("click", handleNoButtonEvent);
+function handleNoButtonEvent() {
+  if (counter == 0) {
+    let sad = new Audio("./audio/wah-wah-sad-trombone-6347.mp3");
+    sad.play();
+
+    document.querySelector("body").innerHTML +=
+      '<div id="noWindow">' +
+      '  <div class="window">' +
+      "<h3>Кохусь це печально, але я тобі дам останій шанс!</h3>" +
+      " <p>" +
+      'Вибирай з розумом моя квіточко, якщо знову вибериш "Ні" то будеш піся попою назавжди!!!' +
+      "</p>" +
+      '<img src="./images/angry-kitten-angry-kitty.gif" alt="" />' +
+      '<button onclick="handleCloseBlock()" id="closeBlock">Закрити</button>' +
+      "</div>" +
+      "</div>";
+  }
+}
+
+function handleCloseBlock() {
+  document.querySelector("#noWindow").remove();
+  document.querySelector(".no").remove();
+  document
+    .querySelector(".yes")
+    .addEventListener("click", handleYesButtonEvent);
+}
+
+document.querySelector(".yes").addEventListener("click", handleYesButtonEvent);
+
+function handleYesButtonEvent() {
+  let yeepy = new Audio("./audio/yippee-tbh.mp3");
+  yeepy.play();
+  document.querySelector("body").innerHTML +=
+    '<div id="yesWindow">' +
+    '<div class="window">' +
+    "<h3>ЄПІ ЄПІ ЄПІ ЄПІ ЄПІ ЄПІ!</h3>" +
+    "<p>Ти моє безмежне котятко, <strong>КОХАЮ БЕЗМЕЖНО!!!</strong></p>" +
+    '<img src="./images/hn.gif" alt="" />' +
+    "</div>" +
+    "</div>";
+
+  document
+    .querySelectorAll(".form-btn")
+    .forEach((btn) => btn.classList.add("disable"));
 }
