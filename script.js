@@ -2,6 +2,11 @@ if (localStorage.getItem("token") == null) {
   window.location.href = "index.html";
 }
 
+let music = new Audio("./audio/bg-music.mp3");
+music.volume = 0.5;
+music.loop = true;
+music.play();
+
 const contentContainer = document.querySelector(".contentContainer");
 const CONTENT_CONTAINER_WIDTH = contentContainer.offsetWidth;
 
