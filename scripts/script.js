@@ -1,7 +1,7 @@
 if (localStorage.getItem("token") == null) {
   window.location.href = "index.html";
 }
-let music = new Audio("./audio/bg-music.mp3");
+let music = new Audio("./static/audio/bg-music.mp3");
 music.volume = 0.1;
 music.loop = true;
 music.autoplay = true;
@@ -54,7 +54,7 @@ noBtn.addEventListener("click", handleNoButtonEvent);
 function handleNoButtonEvent() {
   if (counter == 0) {
     music.pause();
-    let sad = new Audio("./audio/wah-wah-sad-trombone-6347.mp3");
+    let sad = new Audio("./static/audio/wah-wah-sad-trombone-6347.mp3");
     sad.play();
     noBtn.setAttribute("value", ":((");
     document.querySelector("body").innerHTML +=
@@ -64,7 +64,7 @@ function handleNoButtonEvent() {
       " <p>" +
       "Вибирай з розумом моя квіточко, інакше станеться щось погане!" +
       "</p>" +
-      '<img src="./images/angry-kitten-angry-kitty.gif" alt="" />' +
+      '<img src="./static/images/angry-kitten-angry-kitty.gif" alt="" />' +
       '<button onclick="handleCloseBlock()" id="closeBlock">Закрити</button>' +
       "</div>" +
       "</div>";
@@ -82,14 +82,14 @@ function handleCloseBlock() {
 document.querySelector(".yes").addEventListener("click", handleYesButtonEvent);
 
 function handleYesButtonEvent() {
-  let yeepy = new Audio("./audio/yippee-tbh.mp3");
+  let yeepy = new Audio("./static/audio/yippee-tbh.mp3");
   yeepy.play();
   document.querySelector("body").innerHTML +=
     '<div id="yesWindow">' +
     '<div class="window">' +
     "<h3>ЄПІ ЄПІ ЄПІ ЄПІ ЄПІ ЄПІ!</h3>" +
     "<p>Ти моє безмежне котятко, <strong>КОХАЮ БЕЗМЕЖНО!!!</strong>. Цьомі цьомі!</p>" +
-    '<img src="./images/hn.gif" alt="" />' +
+    '<img src="./static/images/hn.gif" alt="" />' +
     "</div>" +
     "</div>";
 
